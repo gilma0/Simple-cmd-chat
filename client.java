@@ -15,7 +15,10 @@ public class client {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		Socket sock = new Socket("192.168.1.100", 2222);
+		System.out.println("please enter server ip: ");
+		Scanner scanIp = new Scanner(System.in);
+	   	String IP = scanIp.nextLine();
+		Socket sock = new Socket(IP, 2222);
 		OutputStream out = sock.getOutputStream();
 		OutputStreamWriter kaka = new OutputStreamWriter(out);
 		BufferedWriter kaki = new BufferedWriter(kaka);
